@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtxGraphics", "HtxGraphics\HtxGraphics.csproj", "{73E8C0AF-622B-4F22-A011-099FDAD87FC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtxGraphics", "HtxGraphics\HtxGraphics.csproj", "{73E8C0AF-622B-4F22-A011-099FDAD87FC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{6F444889-AD4A-483D-805D-A6C349FBC0D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{F6507807-4929-4D2F-B883-1E762FB01D5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{73E8C0AF-622B-4F22-A011-099FDAD87FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73E8C0AF-622B-4F22-A011-099FDAD87FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73E8C0AF-622B-4F22-A011-099FDAD87FC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6507807-4929-4D2F-B883-1E762FB01D5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6507807-4929-4D2F-B883-1E762FB01D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6507807-4929-4D2F-B883-1E762FB01D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6507807-4929-4D2F-B883-1E762FB01D5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6507807-4929-4D2F-B883-1E762FB01D5A} = {6F444889-AD4A-483D-805D-A6C349FBC0D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6076FC58-9253-45B7-B850-08D5CB6CFE63}
