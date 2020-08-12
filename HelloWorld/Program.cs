@@ -8,6 +8,8 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             var window = new Window();
+            window.GetOrCreateRenderer();
+            window.GetOrCreateInput();
             window.Run();
         }
     }

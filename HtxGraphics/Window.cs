@@ -1,38 +1,90 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using HtxGraphics.Rendering;
 using OpenToolkit.Mathematics;
-using OpenToolkit.Windowing;
+using OpenToolkit.Windowing.Common;
 using OpenToolkit.Windowing.Desktop;
 
 namespace HtxGraphics
 {
-    public class Window : IDisposable
+    //TODO: Create own glfw implementation
+    public class Window : GameWindow
     {
-        private GameWindow _window;
-
-        public Window(int width = 800, int height = 600, string title = "HtxGraphicsApp")
+        private IThreadProcess? _renderer;
+        private IThreadProcess? _input;
+        
+        public Window(int width, int height, string title = "HtxGraphicsApp") :
+            this()
         {
-            var windowSettings = GameWindowSettings.Default;
-            var nativeSettings = NativeWindowSettings.Default;
-            nativeSettings.Size = new Vector2i(width, height);
-            nativeSettings.Title = title;
-            _window = new GameWindow(windowSettings, nativeSettings);
+            Size = new Vector2i(width, height);
+            Title = title;
+        }
+        
+        public Window(GameWindowSettings? gameWindowSettings = null, NativeWindowSettings? nativeWindowSettings = null) : 
+            base(gameWindowSettings ?? GameWindowSettings.Default, nativeWindowSettings ?? NativeWindowSettings.Default)
+        {
+            UpdateFrame += OnUpdateFrame;
+            Logger.Instantiate();
         }
 
-        public Window(GameWindowSettings windowSettings, NativeWindowSettings nativeSettings)
+        private void OnUpdateFrame(FrameEventArgs obj)
         {
-            _window = new GameWindow(windowSettings, nativeSettings);
+            if (!_input.MultiThreaded)
+            {
+                _renderer.Update();
+            }
+            //Call update event
+            if (!_renderer.MultiThreaded)
+            {
+                _renderer.Update();
+            }
         }
 
-        public void Run()
+        public Renderer GetOrCreateRenderer(bool createMultiThreaded = false)
         {
-            _window.Run();
+            if (_renderer == null)
+            {
+                _renderer = new Renderer(this, createMultiThreaded);
+            }
+
+            return (Renderer)_renderer;
         }
 
-        public void Dispose()
+        public Input GetOrCreateInput(bool createMultiThreaded = false)
         {
-            _window.Dispose();
+            if (_input == null)
+            {
+                _input = new Input(this, createMultiThreaded);
+            }
+
+            return (Input)_input;
         }
     }
+    
+    // public class Window : IDisposable
+    // {
+    //     private GameWindow _window;
+    //
+    //     public Window(int width = 800, int height = 600, string title = "HtxGraphicsApp")
+    //     {
+    //         var windowSettings = GameWindowSettings.Default;
+    //         var nativeSettings = NativeWindowSettings.Default;
+    //         nativeSettings.Size = new Vector2i(width, height);
+    //         nativeSettings.Title = title;
+    //         _window = new GameWindow(windowSettings, nativeSettings);
+    //     }
+    //
+    //     public Window(GameWindowSettings windowSettings, NativeWindowSettings nativeSettings)
+    //     {
+    //         _window = new GameWindow(windowSettings, nativeSettings);
+    //     }
+    //
+    //     public void Run()
+    //     {
+    //         _window.Run();
+    //     }
+    //
+    //     public void Dispose()
+    //     {
+    //         _window.Dispose();
+    //     }
+    // }
 }
