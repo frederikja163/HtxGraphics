@@ -1,5 +1,4 @@
 ﻿using HtxGraphics;
-using System;
 
 namespace HelloWorld
 {

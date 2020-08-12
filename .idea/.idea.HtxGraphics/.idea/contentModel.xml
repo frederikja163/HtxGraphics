@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\fjapl\.nuget\packages\opentoolkit.redist.glfw\3.3.0-pre20190419183326\runtimes\linux-x64\native\libglfw.so.3.3" t="Include" />
+    <e p="C:\Users\fjapl\.nuget\packages\opentoolkit.redist.glfw\3.3.0-pre20190419183326\runtimes\win-x64\native\glfw3-x64.dll" t="Include" />
+    <e p="C:\Users\fjapl\.nuget\packages\opentoolkit.redist.glfw\3.3.0-pre20190419183326\runtimes\win-x86\native\glfw3-x86.dll" t="Include" />
+    <e p="C:\Users\fjapl\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\fjapl\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_HtxGraphics.1010594404.00" t="ExcludeRecursive" />
+    <e p="C:\Users\fjapl\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\fjapl\Documents\projects\HtxGraphics" t="IncludeFlat">
+      <e p="Examples" t="Include" />
+      <e p="HelloWorld" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HelloWorld.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="HelloWorld.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="HtxGraphics" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HtxGraphics.csproj" t="IncludeRecursive" />
+        <e p="Input" t="Include">
+          <e p="Input.cs" t="Include" />
+        </e>
+        <e p="IThreadProcess.cs" t="Include" />
+        <e p="Logger.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="HtxGraphics.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Rendering" t="Include">
+          <e p="Renderer.cs" t="Include" />
+        </e>
+        <e p="Window.cs" t="Include" />
+      </e>
+      <e p="HtxGraphics.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
