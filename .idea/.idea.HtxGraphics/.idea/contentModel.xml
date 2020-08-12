@@ -37,7 +37,17 @@
           </e>
         </e>
         <e p="Rendering" t="Include">
+          <e p="IDrawable.cs" t="Include" />
+          <e p="LowLevel" t="Include">
+            <e p="Geometry.cs" t="Include" />
+          </e>
+          <e p="OpenGL" t="Include">
+            <e p="IndexBuffer.cs" t="Include" />
+            <e p="VertexArrayObject.cs" t="Include" />
+            <e p="VertexBuffer.cs" t="Include" />
+          </e>
           <e p="Renderer.cs" t="Include" />
+          <e p="Vertex.cs" t="Include" />
         </e>
         <e p="Window.cs" t="Include" />
       </e>

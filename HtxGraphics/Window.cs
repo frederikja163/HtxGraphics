@@ -6,7 +6,7 @@ using OpenToolkit.Windowing.Desktop;
 namespace HtxGraphics
 {
     //TODO: Create own glfw implementation
-    public class Window : GameWindow
+    public sealed class Window : GameWindow
     {
         private IThreadProcess? _renderer;
         private IThreadProcess? _input;

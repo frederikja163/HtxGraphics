@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace HtxGraphics
 {
-    public class Input : IThreadProcess
+    public sealed class Input : IThreadProcess
     {
         private readonly bool _multiThreaded;
         private readonly Thread? _thread;
@@ -17,6 +17,10 @@ namespace HtxGraphics
             {
                 _thread = new Thread(RunThread);
                 _thread.Start();
+            }
+            else
+            {
+                Initialize();
             }
         }
 
